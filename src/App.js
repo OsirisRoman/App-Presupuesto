@@ -6,6 +6,13 @@ function App() {
   //Definir el state del presupuesto y del restante
   const [presupuesto, setPresupuesto] = useState(0);
   const [restante, setRestante] = useState(0);
+  const [gastos, setGastos] = useState([]);
+
+  //Agregar nuevo gasto
+  const agregarNuevoGasto = (gasto) => {
+    setRestante(presupuesto - gasto);
+    setGastos([...gastos, gasto]);
+  };
 
   return (
     <div className='container'>
@@ -15,7 +22,7 @@ function App() {
           <Pregunta setPresupuesto={setPresupuesto} setRestante={setRestante} />
           <div className='row'>
             <div className='one-half column'>
-              <Formulario />
+              <Formulario agregarNuevoGasto={agregarNuevoGasto} />
             </div>
             <div className='one-half column'>2</div>
           </div>
