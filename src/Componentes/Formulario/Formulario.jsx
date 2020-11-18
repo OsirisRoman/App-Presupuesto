@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import Error from '../Error/Error';
 import { nanoid } from 'nanoid';
@@ -74,6 +75,11 @@ const Formulario = ({ setGasto, setMostrarGasto }) => {
       />
     </form>
   );
+};
+
+Formulario.propTypes = {
+  setGasto: PropTypes.func.isRequired,
+  setMostrarGasto: PropTypes.func.isRequired,
 };
 
 export default Formulario;

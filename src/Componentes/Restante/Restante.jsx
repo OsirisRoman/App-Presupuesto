@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 import { revisarPresupuesto } from '../../helpers';
 
@@ -11,6 +12,11 @@ const Restante = ({ presupuesto, restante }) => {
       </div>
     </Fragment>
   );
+};
+
+Restante.propTypes = {
+  presupuesto: PropTypes.number.isRequired,
+  restante: PropTypes.number.isRequired,
 };
 
 export default Restante;
