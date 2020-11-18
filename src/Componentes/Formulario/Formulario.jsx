@@ -53,6 +53,7 @@ const Formulario = ({ setGasto, setMostrarGasto }) => {
         type='text'
         className='u-full-width'
         placeholder='Ej. Transporte'
+        value={nombreGasto}
         onChange={(e) => setNombreGasto(e.target.value)}
       />
       <div className='campo'>

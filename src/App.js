@@ -17,10 +17,10 @@ function App() {
   useEffect(() => {
     if (mostrarGasto) {
       setGastos([...gastos, gasto]);
-      setRestante(presupuesto - gasto.cantidadGasto);
+      setRestante(restante - gasto.cantidadGasto);
       setMostrarGasto(false);
     }
-  }, [gasto]);
+  }, [gasto, gastos, mostrarGasto, restante]);
 
   return (
     <div className='container'>
