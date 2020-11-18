@@ -26,6 +26,15 @@ function App() {
     <div className='container'>
       <header>
         <h1>Gasto Semanal</h1>
+        <div className='container'>
+          <h5
+            className='u-text-center'
+            style={{ textAlign: 'center', color: 'white' }}>
+            Un administrador de gastos para un presupuesto incial que hace uso
+            de formularios y su validación respectiva además de algunos react
+            hooks 🎉
+          </h5>
+        </div>
         <div className='contenido-principal contenido'>
           {mostrarPregunta ? (
             <Pregunta
