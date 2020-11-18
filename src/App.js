@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Pregunta from './Componentes/PreguntaPresupuesto/PreguntaPresupuesto';
 import Formulario from './Componentes/Formulario/Formulario';
 import Listado from './Componentes/Listado/Listado';
+import Restante from './Componentes/Restante/Restante';
 
 function App() {
   //Definir el state del presupuesto y del restante
@@ -34,6 +35,7 @@ function App() {
               </div>
               <div className='one-half column'>
                 <Listado gastos={gastos} />
+                <Restante presupuesto={presupuesto} restante={restante} />
               </div>
             </div>
           )}
